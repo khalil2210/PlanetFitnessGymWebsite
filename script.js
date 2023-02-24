@@ -1,3 +1,61 @@
+//btn up
+let scrollToTopBTN=document.getElementById("btn-up")
+scrollToTopBTN.style.display='none'
+scrollToTopBTN.addEventListener("click",()=>{
+window.scrollTo({
+    top:0 , behavior:"smooth"
+})
+});
+
+window.addEventListener("scroll",()=>{
+
+    let scroll= this.pageYOffset;
+   if(scroll >400){
+    scrollToTopBTN.style.display=''
+   }
+   else{
+    scrollToTopBTN.style.display='none'
+   }
+})
+
+//get the height from the top  of the sections
+let aboutSection ;
+let courseSection ;
+let contactSection ;
+
+////navbar
+let about=document.getElementById("about").addEventListener("click",()=>{
+    //get the height of the section 
+aboutSection=document.getElementById("About-section").offsetTop; 
+ window.scrollTo({
+    top:aboutSection -70 , behavior:"smooth"
+})
+})
+
+let course=document.getElementById("course").addEventListener("click",()=>{
+    //get the height of the section
+    courseSection=document.getElementById("courses-section").offsetTop;
+    window.scrollTo({
+        top:courseSection -70, behavior:"smooth"
+    })
+})
+
+let contact=document.getElementById("contact").addEventListener("click",()=>{
+    //get the height of the section
+    contactSection=document.getElementById("contact-section").offsetTop;
+    window.scrollTo({
+        top:contactSection , behavior:"smooth"
+    })
+})
+
+
+
+
+
+
+
+//BMI calculator
+
 function calculateBMI(){
     let height=document.getElementById("height").value ;
     let weight=document.getElementById("weight").value ;
