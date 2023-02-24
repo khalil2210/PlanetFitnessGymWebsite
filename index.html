@@ -4,10 +4,9 @@
     <meta charset='utf-8'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-  
+   
 </head>
 <body>
     <div id="header-image">
@@ -124,13 +123,13 @@ max-width: 500px;">
     <h3 style="color: #EC4C66;" >BMI calculator</h3>
     <h4>You can provide your height and weight to calculate your body mass index</h4>
     <div style="display: flex;flex-direction: column;justify-content: centerS;">
-        <label for="">Height</label>
-        <input class="input" type="number">
+        <label for="height">Height (Cm)</label>
+        <input class="input" type="number" id="height" max="230" min="20" >
         <br>
-        <label for="">Weight</label>
-        <input class="input" type="number">
+        <label for="weight">Weight (Kg) </label>
+        <input class="input" type="number" id="weight"max="300" min="10">
         <br>
-        <button id="bmi-button"type="submit">Calculate BMI</button>
+        <button id="bmi-button" type="submit">Calculate BMI</button>
     </div>
 </div>
    
@@ -174,11 +173,12 @@ max-width: 500px;">
 
      
     </div>
-<h5 style="text-align: center;">Made by Mohamed Khalil Hosni <br> Images from Ux    nsplash</h5>
+<h5 style="text-align: center;">Made by Mohamed Khalil Hosni <br> Images from Unsplash</h5>
 </div>
 
 
 </footer>
+<script src="script.js"></script>
 </body>
 
 </html>
