@@ -54,7 +54,7 @@ let navBarHideButton=document.getElementById("nav-bar-small-button").addEventLis
 let navbar=document.getElementById("nav-bar");
 
 function hideShow(){
-    console.log(click)
+   
     if(click%2==0){
         navbar.classList.remove("hide");
         navbar.classList.add("show");
