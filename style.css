@@ -37,7 +37,17 @@
     transition: height 200ms ease;
 }
 
+#bgr-descr-container{
+    background-color: rgba(177, 177, 177, 0.281);
+    width: 70%;
+min-width: 300px;
+padding: 20px;
 
+max-width: 500px;
+text-align: center;
+border-radius: 10px;
+backdrop-filter: blur(3px);
+}
 
 
 
@@ -132,18 +142,6 @@ cursor: pointer;
     background-color: #792634;
 }
 
-.bgr-descr-title {
-margin: 5px;
-}
-
-
-.bgr-descr-subtitle {
-margin: 10px;
-}
-
-.bgr-descr-desc{
-    margin: 5px;
-}
 
 #bgr-image-dscr{
     display: flex; 
@@ -215,10 +213,18 @@ background-color: rgb(207, 190, 190);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: fit-content;
     flex-wrap: wrap;
 }
+@media screen and (max-width: 800px){
+    #info-container{   
+        flex-direction: column;
+    }
+}
+
 .info{
    text-align: center;
+  
 }
 #newsletter{
     display: flex;
