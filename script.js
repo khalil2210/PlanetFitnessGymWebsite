@@ -55,11 +55,10 @@ let navbar=document.getElementById("nav-bar");
 
 function hideShow(){
     console.log(click)
-    if(click%2==1){
+    if(click%2==0){
         navbar.classList.remove("hide");
         navbar.classList.add("show");
     }
-
     else{
         navbar.classList.remove("show");
         navbar.classList.add("hide");
@@ -71,11 +70,13 @@ function hideShow(){
 let mediaQuery = window.matchMedia('(min-width: 601px)');
 
 function handleMediaQueryChange(event) {
+    console.log(event)
   if (event.matches) {
     navbar.classList.remove("hide");
     navbar.classList.remove("show");
   } else {
-    // Screen width is less than 768 pixels
+    
+    navbar.classList.add("hide");
   }
 }
 mediaQuery.addListener(handleMediaQueryChange);
