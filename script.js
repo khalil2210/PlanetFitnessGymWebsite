@@ -8,7 +8,6 @@ window.scrollTo({
 });
 
 window.addEventListener("scroll",()=>{
-
     let scroll= this.pageYOffset;
    if(scroll >400){
     scrollToTopBTN.style.display=''
@@ -49,8 +48,35 @@ let contact=document.getElementById("contact").addEventListener("click",()=>{
 })
 
 
+///hide show navbar button
+let click =0;
+let navBarHideButton=document.getElementById("nav-bar-small-button").addEventListener("click",hideShow)
+let navbar=document.getElementById("nav-bar");
+
+function hideShow(){
+    if(click%2==0){
+        navbar.classList.remove("hide");
+        navbar.classList.add("show");
+    }
+    else{
+        navbar.classList.remove("show");
+        navbar.classList.add("hide");
+    }
+    click++
+}
 
 
+let mediaQuery = window.matchMedia('(min-width: 601px)');
+
+function handleMediaQueryChange(event) {
+  if (event.matches) {
+    navbar.classList.remove("hide");
+    navbar.classList.remove("show");
+  } else {
+    // Screen width is less than 768 pixels
+  }
+}
+mediaQuery.addListener(handleMediaQueryChange);
 
 
 

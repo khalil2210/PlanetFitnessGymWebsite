@@ -13,17 +13,73 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+#nav-bar-small-button{
+    position: fixed;
+    z-index: 3;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;  
+    color: #EC4C66;
+    cursor: pointer;
+    
+}
 
-#nav-bar{background-color: #ffffff;
-    height: 70px;
+#nav-bar{
+    background-color: #ffffff; 
     display: flex;
     width: 100%;
     position: fixed;
-    z-index: 5;
+    z-index: 2;
+    
     flex-direction: row;
     align-items: center;
     margin-top: -8px;
+    transition: height 200ms ease;
 }
+
+
+
+
+
+
+@media screen and (max-width: 600px){
+    #nav-bar{       
+flex-direction: column;
+height: 200px;
+justify-content: space-around;}
+    .navbar-logo{
+        flex-grow: 1;}      
+}
+
+@media screen and (min-width: 601px){
+  
+ #nav-bar{
+    height: fit-content;
+ }  
+    .navbar-logo{
+ flex-grow: 8;
+ padding-left: 30px;
+}
+
+
+#nav-bar-small-button{
+    display: none;} 
+}
+
+#nav-bar.hide{
+    height: 0px;
+    overflow: hidden;
+    transition: height 200ms ease;
+}
+
+#nav-bar.show{
+    height: 200px; 
+    transition: height 200ms ease;
+
+}
+
+
+
 
 .navbar-element{
     font-size: 10;
@@ -33,13 +89,9 @@
 }
 
  a {
-    
     cursor: pointer;
 }
-.navbar-logo{
-  flex-grow: 8  ;
-  padding-left: 30px;
-}
+
 
 #header-button{
    background-color: #EC4C66; /* Green */
@@ -136,8 +188,6 @@ margin: 10px;
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-
 .course-card{
     position: relative;
     border-radius: 10px;
@@ -154,7 +204,6 @@ background-color: rgb(207, 190, 190);
     color: rgb(255, 255, 255);
 }
 
-
 .hover-card-effect{
     position: absolute;
     height: 0;
@@ -162,18 +211,15 @@ background-color: rgb(207, 190, 190);
     bottom: 0;
     left: 0;
 }
-
 #info-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
 .info{
    text-align: center;
 }
-
 #newsletter{
     display: flex;
     flex-direction: column;
@@ -199,9 +245,6 @@ background-color: rgb(207, 190, 190);
 .input{
     height: 25px;
 }
-
-
-
 .fa {
     margin-top: -7px;
     font-size: 30px;
@@ -209,13 +252,9 @@ background-color: rgb(207, 190, 190);
     cursor: pointer;
 
 }
-
 .fa:hover {
     opacity: 0.7;
 }
-
-
-
 #btn-up {
     background-color: rgb(20, 122, 224);
     border: none;
@@ -231,13 +270,6 @@ background-color: rgb(207, 190, 190);
 
  
 }
-
-
-
-
-
-
-
 
 #bmi-card{
     height: 100%;
