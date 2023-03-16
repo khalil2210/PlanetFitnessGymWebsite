@@ -38,7 +38,7 @@
 }
 
 #bgr-descr-container{
-    background-color: rgba(177, 177, 177, 0.281);
+    background-color: rgba(202, 202, 202, 0.315);
     width: 70%;
 min-width: 300px;
 padding: 20px;
@@ -46,7 +46,7 @@ padding: 20px;
 max-width: 500px;
 text-align: center;
 border-radius: 10px;
-backdrop-filter: blur(3px);
+backdrop-filter: blur(5px);
 }
 
 
